@@ -5,13 +5,15 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 	<bean class="com.springcore.ref.B" name="bref">
-		<property name="y" vlaue="90" />
+		<property name="y" value="90" />
 	</bean>
+	
+	<bean class="com.springcore.ref.A" name="aref" p:x ="35" p:b-ref="bref"/>
 
-	<bean class="com.springcore.ref.A" name="aref">
-		<property name="x" vlaue="12" />
+	<!--<bean class="com.springcore.ref.A" name="aref">
+		<property name="x" value="12" />
 		<property name="b">
 			<ref bean="bref"/>
 		</property>
-	</bean>
+	</bean>-->
 </beans>
